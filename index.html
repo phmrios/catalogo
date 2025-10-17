@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Café Catálogo — Vitrine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <h1>Café Catálogo</h1>
+          <small>O que já provei</small>
+        </div>
+
+        <div class="header-actions" role="group" aria-label="Ações">
+          <button id="btnReload" class="btn" title="Recarregar dados">
+            Recarregar
+          </button>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Filtros e busca">
+        <div>
+          <label for="query" class="sr-only">Buscar</label>
+          <input
+            id="query"
+            type="search"
+            placeholder="Buscar por nome, produtor, notas…"
+            aria-label="Buscar"
+          />
+        </div>
+        <select id="fOrigem" aria-label="Filtrar por origem">
+          <option value="">Origem</option>
+        </select>
+        <select id="fProcesso" aria-label="Filtrar por processo">
+          <option value="">Processo</option>
+        </select>
+        <select id="fMetodo" aria-label="Filtrar por método">
+          <option value="">Método</option>
+        </select>
+        <select id="fTorra" aria-label="Filtrar por torra">
+          <option value="">Torra</option>
+          <option>Clara</option>
+          <option>Média</option>
+          <option>Escura</option>
+        </select>
+        <select id="fOrdenar" aria-label="Ordenar">
+          <option value="recentes">Ordenar: Recentes</option>
+          <option value="nome">Nome (A–Z)</option>
+          <option value="nota">Nota (maior)</option>
+        </select>
+      </section>
+
+      <div id="status" class="box-claro" style="display: none"></div>
+      <div id="empty" class="box-claro" style="display: none">
+        Nada por aqui. Verifique <code>/data/index.json</code>.
+      </div>
+
+      <section
+        id="grid"
+        class="grid"
+        aria-live="polite"
+        aria-busy="false"
+      ></section>
+
+      <footer class="footnote">
+        Pedro Rios, 2025.
+      </footer>
+    </div>
+
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>

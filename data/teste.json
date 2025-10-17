@@ -1,0 +1,44 @@
+{
+  "id": "caparao-catual-001",
+  "_ts": 1739724000000,
+  "nome": "Brasil Caparaó Catuaí",
+  "produtor": "Fazenda Esperança",
+  "origem": "Brasil / Caparaó / 1.200 m",
+  "variedade": "Catuaí",
+  "processo": "natural",
+  "dataTorra": "2025-03-15",
+  "torrefador": "Tostador da Esquina",
+  "densidade": 720,
+  "tamanho": 750,
+  "umidade": 10.5,
+  "agtron": 75,
+  "torraNivel": "Média",
+  "defeitos": "NDN",
+  "perfil": "Aroma doce; acidez cítrica média; corpo médio; notas de chocolate e amêndoas.",
+  "impressoes": "Moer um pouco mais grosso reduz amargor final.",
+  "tags": ["Brasil", "Catuaí", "V60", "chocolate"],
+  "avaliacoes": [
+    {
+      "metodo": "V60",
+      "nota": 4,
+      "moagem": 750,
+      "dose": 18,
+      "rendimento": 288,
+      "tempo": 165,
+      "tempAgua": 93,
+      "melhorUso": "Filtro",
+      "comentarios": "1:16 estável."
+    },
+    {
+      "metodo": "Espresso",
+      "nota": 3,
+      "moagem": 250,
+      "dose": 18,
+      "rendimento": 36,
+      "tempo": 28,
+      "tempAgua": 93,
+      "melhorUso": "Curto",
+      "comentarios": "Acidez sobe >30s."
+    }
+  ]
+}

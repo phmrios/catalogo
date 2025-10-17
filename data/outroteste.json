@@ -1,0 +1,41 @@
+{
+  "id": "kenya-nyeri-aa-001",
+  "_ts": 1739990400000,
+  "nome": "Kenya Nyeri AA",
+  "produtor": "Cooperativa Nyeri",
+  "origem": "Quênia / Nyeri / 1.800 m",
+  "variedade": "SL28, SL34",
+  "processo": "lavado",
+  "dataTorra": "2025-04-01",
+  "torrefador": "RoastLab",
+  "densidade": 740,
+  "tamanho": 700,
+  "umidade": 10.2,
+  "agtron": 80,
+  "torraNivel": "Clara",
+  "defeitos": "NDN",
+  "perfil": "Jasmim, frutas vermelhas, acidez brilhante, corpo médio.",
+  "impressoes": "Brilha no filtro; espresso fica muito cítrico.",
+  "tags": ["Kenya", "lavado", "frutado", "V60"],
+  "avaliacoes": [
+    {
+      "metodo": "V60",
+      "nota": 5,
+      "moagem": 730,
+      "dose": 18,
+      "rendimento": 288,
+      "tempo": 150,
+      "tempAgua": 92,
+      "comentarios": "Lembra morango."
+    },
+    {
+      "metodo": "Kalita",
+      "nota": 4,
+      "moagem": 720,
+      "dose": 20,
+      "rendimento": 320,
+      "tempo": 170,
+      "tempAgua": 92
+    }
+  ]
+}

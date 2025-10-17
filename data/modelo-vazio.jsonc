@@ -1,0 +1,33 @@
+{
+  "id": "",
+  "_ts": null,
+  "nome": "",
+  "produtor": "",
+  "origem": "",
+  "variedade": "",
+  "processo": "",
+  "dataTorra": "",
+  "torrefador": "",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "",
+  "defeitos": "",
+  "perfil": "",
+  "impressoes": "",
+  "tags": [],
+  "avaliacoes": [
+    {
+      "metodo": "",
+      "nota": null,
+      "moagem": null,
+      "dose": null,
+      "rendimento": null,
+      "tempo": null,
+      "tempAgua": null,
+      "melhorUso": "",
+      "comentarios": ""
+    }
+  ]
+}
