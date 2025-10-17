@@ -1,0 +1,41 @@
+{
+  "id": "unique-setembro-02",
+  "_ts": 1739798400,
+  "nome": "Sítio Santa Ana - Catuaí Amarelo Natural",
+  "produtor": "Marcus Augusto Ferreira",
+  "origem": "Cristina – Mantiqueira de Minas, MG",
+  "variedade": "Catuaí Amarelo",
+  "processo": "Natural",
+  "dataTorra": "",
+  "torrefador": "",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média",
+  "defeitos": "",
+  "perfil": "Notas de maçã do amor, chá de rosas, frutas vermelhas, corpo cremoso, acidez cítrica e finalização doce de caramelo.",
+  "impressoes": "",
+  "tags": [
+    "Catuaí Amarelo",
+    "Natural",
+    "Mantiqueira de Minas",
+    "Torra Média",
+    "Frutado",
+    "Doce",
+    "Floral"
+  ],
+  "avaliacoes": [
+    {
+      "metodo": "",
+      "nota": 86,
+      "moagem": null,
+      "dose": null,
+      "rendimento": null,
+      "tempo": null,
+      "tempAgua": null,
+      "melhorUso": "Filtro ou métodos de extração que valorizem acidez e doçura (ex: Hario V60, Kalita)",
+      "comentarios": "Café com acidez cítrica marcante e corpo cremoso, ideal para preparo filtrado. Excelente expressão de terroir da Mantiqueira."
+    }
+  ]
+}
