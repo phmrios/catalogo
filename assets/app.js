@@ -1,8 +1,9 @@
-/* Vitrine somente-leitura — versão “detalhe completo”.
-   Mudanças principais:
-   - Cada card exibe resumo + <details> com TODOS os campos do JSON.
-   - Tabela acessível para avaliacoes (th + scope, caption).
-   - Renderização condicional de campos (só mostra o que existe).
+/* Vitrine somente-leitura — política “sempre renderizar”.
+   Mudanças:
+   - Nada é bloqueado por validação.
+   - JSON inválido gera um "stub" visível com mensagem de erro.
+   - Avaliações tolerantes (qualquer coisa que não seja array vira []).
+   - Avisos e erros aparecem dentro do <details>.
 */
 
 import {
@@ -13,7 +14,7 @@ import {
   fmtData,
 } from "./core.js";
 
-/* Estado leve (somente leitura) */
+/* Estado (somente leitura) */
 const state = {
   cafes: [],
   filtros: {
@@ -52,30 +53,32 @@ async function loadAll() {
     const href = typeof entry === "string" ? entry : entry?.href;
     if (!href) {
       errors.push("Entrada de manifesto sem 'href' válido.");
+      results.push(makeStubCafe("[entrada inválida]", "Manifesto sem href."));
       continue;
     }
+
     try {
       const raw = await fetchJSON(`./data/${href}`);
       const cafe = normalizarCafe(raw);
-      const errs = validarCafe(cafe);
-      if (errs.length) {
-        errors.push(`${href}: ${errs.join("; ")}`);
-        continue;
-      }
-      cafe.__href = href; // guardamos o arquivo de origem para exibir no detalhe
+      const warns = validarCafe(cafe); // não bloqueia
+      cafe.__href = href;
+      cafe.__warnings = warns;
+      // tolerância extra: se avaliacoes não for array, vira []
+      if (!Array.isArray(cafe.avaliacoes)) cafe.avaliacoes = [];
       results.push(cafe);
+      if (warns.length) errors.push(`${href}: ${warns.join("; ")}`);
     } catch (e) {
-      errors.push(`${href}: ${e.message}`);
+      // JSON ilegível → ainda assim renderiza como stub visível
+      const stub = makeStubCafe(href, String(e?.message || e));
+      results.push(stub);
+      errors.push(`${href}: ${String(e?.message || e)}`);
     }
   }
 
   state.cafes = results.sort((a, b) => (b._ts || 0) - (a._ts || 0));
-  if (errors.length) {
-    showStatus(
-      "Alguns itens não foram carregados:\n" + errors.join("\n"),
-      true,
-    );
-  } else hideStatus();
+  if (errors.length)
+    showStatus("Avisos/erros durante a carga:\n" + errors.join("\n"), true);
+  else hideStatus();
 }
 
 /* ----------------- UI & Render ------------------- */
@@ -127,7 +130,7 @@ function render() {
     );
   if (metodo)
     list = list.filter((c) =>
-      c.avaliacoes?.some(
+      toArray(c.avaliacoes).some(
         (m) => (m.metodo || "").toLowerCase() === metodo.toLowerCase(),
       ),
     );
@@ -140,7 +143,9 @@ function render() {
     list.sort((a, b) => (a.nome || "").localeCompare(b.nome || ""));
   else if (ordenar === "nota")
     list.sort(
-      (a, b) => notaAgregada(b.avaliacoes) - notaAgregada(a.avaliacoes),
+      (a, b) =>
+        notaAgregada(toArray(b.avaliacoes)) -
+        notaAgregada(toArray(a.avaliacoes)),
     );
   else list.sort((a, b) => (b._ts || 0) - (a._ts || 0));
 
@@ -163,9 +168,10 @@ function cardHTML(c) {
     .filter(Boolean)
     .join(" ");
 
-  const notaAvg = notaAgregada(c.avaliacoes);
-  const tags = (c.tags || [])
-    .map((t) => `<span class="badge" aria-label="Tag">${esc(t)}</span>`)
+  const avals = toArray(c.avaliacoes);
+  const notaAvg = notaAgregada(avals);
+  const tags = toArray(c.tags)
+    .map((t) => `<span class="badge" aria-label="Tag">${esc(String(t))}</span>`)
     .join(" ");
   const blocoLivre =
     c.perfil || c.impressoes
@@ -174,7 +180,7 @@ function cardHTML(c) {
 
   return `
     <article class="card">
-      <h3>${esc(c.nome || "—")}</h3>
+      <h3>${esc(c.nome || `(${c.__error ? "Arquivo inválido" : "Sem nome"})`)}</h3>
       <div class="meta">${meta}</div>
       <div>
         <span class="stars" aria-label="Nota média ${notaAvg} de 5">${stars(notaAvg)}</span>
@@ -184,9 +190,27 @@ function cardHTML(c) {
       ${blocoLivre}
 
       <details class="details-block">
-        <summary class="btn-ghost" aria-label="Ver detalhes de ${esc(c.nome || "café")}">
-          Ver detalhes
-        </summary>
+        <summary class="btn-ghost" aria-label="Ver detalhes de ${esc(c.nome || "café")}">Ver detalhes</summary>
+
+        ${
+          c.__error
+            ? `<div class="box-claro" style="border-color:#7a2e2e;background:#fff2f2;color:#351616;">
+            <strong>Erro ao carregar <code>${esc(c.__href || "")}</code>:</strong> ${esc(c.__error)}
+          </div>`
+            : ""
+        }
+
+        ${
+          Array.isArray(c.__warnings) && c.__warnings.length
+            ? `
+          <div class="box-claro">
+            <strong>Avisos de validação:</strong>
+            <ul style="margin:.4rem 0 0 .9rem;">
+              ${c.__warnings.map((w) => `<li>${esc(w)}</li>`).join("")}
+            </ul>
+          </div>`
+            : ""
+        }
 
         <div class="detail-grid">
           ${dlRow("Arquivo", c.__href)}
@@ -207,19 +231,18 @@ function cardHTML(c) {
           ${dlRow("Defeitos", c.defeitos)}
           ${dlRow("Perfil sensorial", c.perfil)}
           ${dlRow("Impressões", c.impressoes)}
-          ${dlRow("Melhor uso (global)", c.melhorUso)}          
         </div>
 
-        ${renderAvaliacoesTable(c.avaliacoes)}
+        ${renderAvaliacoesTable(avals)}
       </details>
     </article>
   `;
 }
 
+/* Helpers de UI */
 function badge(title, value) {
   return `<span class="badge" title="${esc(title)}">${esc(value)}</span>`;
 }
-
 function dlRow(label, value) {
   if (value === null || value === undefined || value === "") return "";
   return `
@@ -229,7 +252,6 @@ function dlRow(label, value) {
     </div>
   `;
 }
-
 function renderAvaliacoesTable(avals) {
   if (!Array.isArray(avals) || avals.length === 0) return "";
   const rows = avals
@@ -237,15 +259,15 @@ function renderAvaliacoesTable(avals) {
       (m, i) => `
     <tr>
       <th scope="row">${i + 1}</th>
-      <td>${esc(m.metodo || "")}</td>
-      <td><span class="stars" aria-label="Nota ${m.nota} de 5">${stars(m.nota || 0)}</span></td>
-      <td>${safe(m.moagem)}</td>
-      <td>${safe(m.dose)}</td>
-      <td>${safe(m.rendimento)}</td>
-      <td>${safe(m.tempo)}</td>
-      <td>${safe(m.tempAgua)}</td>
-      <td>${esc(m.melhorUso || "")}</td>
-      <td>${esc(m.comentarios || "")}</td>
+      <td>${esc(m?.metodo ?? "")}</td>
+      <td><span class="stars" aria-label="Nota ${m?.nota ?? 0} de 5">${stars(m?.nota ?? 0)}</span></td>
+      <td>${safe(m?.moagem)}</td>
+      <td>${safe(m?.dose)}</td>
+      <td>${safe(m?.rendimento)}</td>
+      <td>${safe(m?.tempo)}</td>
+      <td>${safe(m?.tempAgua)}</td>
+      <td>${esc(m?.melhorUso ?? "")}</td>
+      <td>${esc(m?.comentarios ?? "")}</td>
     </tr>
   `,
     )
@@ -275,11 +297,7 @@ function renderAvaliacoesTable(avals) {
   `;
 }
 
-function safe(v) {
-  return v === null || v === undefined || v === "" ? "—" : esc(String(v));
-}
-
-/* Filtros dinâmicos */
+/* Filtros dinâmicos (inalterados) */
 function fillDynamicFilters() {
   setOptions(
     $("#fOrigem"),
@@ -299,7 +317,7 @@ function fillDynamicFilters() {
     $("#fMetodo"),
     uniqSorted(
       state.cafes.flatMap((c) =>
-        (c.avaliacoes || []).map((m) => m.metodo || ""),
+        toArray(c.avaliacoes).map((m) => m?.metodo || ""),
       ),
     ),
     "Método",
@@ -333,6 +351,10 @@ function esc(s = "") {
       ],
   );
 }
+function safe(v) {
+  return v === null || v === undefined || v === "" ? "—" : esc(String(v));
+}
+
 function showStatus(msg, isWarn = false) {
   status.style.display = "block";
   status.textContent = msg;
@@ -344,4 +366,37 @@ function hideStatus() {
 }
 function showError(e) {
   showStatus(String(e?.message || e), true);
+}
+
+/* Robustez: sempre um array */
+function toArray(x) {
+  return Array.isArray(x) ? x : [];
+}
+
+/* Stub para itens ilegíveis (JSON inválido, etc.) */
+function makeStubCafe(href, errorMsg) {
+  return {
+    id: `stub-${Math.random().toString(36).slice(2, 8)}`,
+    _ts: Date.now(),
+    nome: `[JSON inválido] ${href}`,
+    produtor: "",
+    origem: "",
+    variedade: "",
+    processo: "",
+    dataTorra: "",
+    torrefador: "",
+    densidade: null,
+    tamanho: null,
+    umidade: null,
+    agtron: null,
+    torraNivel: "",
+    defeitos: "",
+    perfil: "",
+    impressoes: "",
+    tags: [],
+    avaliacoes: [],
+    __href: href,
+    __error: errorMsg,
+    __warnings: [],
+  };
 }
