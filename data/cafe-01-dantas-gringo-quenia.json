@@ -1,0 +1,48 @@
+{
+  "id": "caf01-dantas-gringo-20251018-9f4b2c17",
+  "_ts": 1760793600,
+  "nome": "Café 01 da DANTAS (Gringo)",
+  "produtor": "",
+  "origem": "Quênia, Murunga",
+  "variedade": "SL28, Ruiru, Batian",
+  "processo": "Natural",
+  "dataTorra": "",
+  "torrefador": "6 Montes (Uruguai)",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "City+",
+  "defeitos": "NDN (nada digno de nota)",
+  "perfil": "Aromático, chocolate, licoroso, bourbon, pipoca doce, melaço, couro, Jägermeister.",
+  "impressoes": "Um café surpreendente — mas não esperaria menos de algo vindo do Quênia, e sem qualquer conceito pessoal anterior.",
+  "tags": [
+    "Kenya",
+    "Murunga",
+    "Natural",
+    "SL28",
+    "Ruiru",
+    "Batian",
+    "City+",
+    "V60",
+    "Chocolate",
+    "Licoroso",
+    "Melaço",
+    "Aromático",
+    "Corpo Médio",
+    "Percolação 1:16"
+  ],
+  "avaliacoes": [
+    {
+      "metodo": "V60",
+      "nota": 8,
+      "moagem": 630,
+      "dose": 20,
+      "rendimento": 320,
+      "tempo": "3:15",
+      "tempAgua": 93,
+      "melhorUso": "Percolação 1:16",
+      "comentarios": "Café que, se houver nova oportunidade de preparo, merece moagem mais fina (~450 µm) em moedor com baixa geração de fines, ou manutenção da moagem atual em moedor com maior produção de fines. Água com proporção 4/2/4 de Mg/Na/K (kit Vitória Régia)."
+    }
+  ]
+}
