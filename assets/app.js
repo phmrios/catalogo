@@ -221,6 +221,7 @@ function cardHTML(c) {
           ${dlRow("Origem", c.origem)}
           ${dlRow("Variedade", c.variedade)}
           ${dlRow("Processo", c.processo)}
+          ${dlRow("Data de quando foi degustado", c.dataBebido ? fmtData(c.dataBebido) : "")}
           ${dlRow("Data de torra", c.dataTorra ? fmtData(c.dataTorra) : "")}
           ${dlRow("Torrefador", c.torrefador)}
           ${dlRow("Densidade (g/L)", c.densidade)}

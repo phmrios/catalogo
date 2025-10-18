@@ -6,6 +6,7 @@
   "origem": "",
   "variedade": "",
   "processo": "",
+  "dataBebido": "",
   "dataTorra": "",
   "torrefador": "",
   "densidade": null,
