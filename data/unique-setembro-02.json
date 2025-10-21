@@ -36,6 +36,17 @@
       "tempAgua": null,
       "melhorUso": "Filtro ou métodos de extração que valorizem acidez e doçura (ex: Hario V60, Kalita)",
       "comentarios": "Café com acidez cítrica marcante e corpo cremoso, ideal para preparo filtrado. Excelente expressão de terroir da Mantiqueira."
+    },
+    {
+      "metodo": "Hario Switch",
+      "nota": 88,
+      "moagem": "25 clicks no Timemore ZP6",
+      "dose": "13,5 g",
+      "rendimento": "250 mL",
+      "tempo": "3:30",
+      "tempAgua": "93 °C",
+      "melhorUso": "Método híbrido (imersão + percolação) que valoriza corpo e complexidade aromática.",
+      "comentarios": "Aroma que começa achocolatado e evolui para floral e melado, acidez marcante e refinada, corpo forte e presente mesmo em diluição, doçura de mel persistente e retrogosto floral e frutado prolongado. Impressionante desempenho no Hario Switch."
     }
   ]
 }
