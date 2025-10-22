@@ -58,6 +58,17 @@
       "tempAgua": 93,
       "melhorUso": "Extração limpa e frutada; ideal para cafés de torra clara e origem única.",
       "comentarios": "Bloom triplo com 3x o peso da dose até 30 segundos; segundo ataque até completar o ratio de 1:12; finalização com o restante da água até 225g aos 1:45; terminando extração aos 2:45. Extração equilibrada, acidez viva, doçura persistente (~15s de retrogosto)."
+    },
+    {
+      "metodo": "AeroPress (invertido)",
+      "nota": 88,
+      "moagem": 550,
+      "dose": 13.5,
+      "rendimento": 200,
+      "tempo": 85,
+      "tempAgua": 85,
+      "melhorUso": "Extração limpa, de corpo presente, que impoem sua acidez sem evidenciar amargor.",
+      "comentarios": "Extração curta (1 min + 25 s de pressão) evidenciou acidez málica e cítrica equilibradas. Corpo presente, que não rouba a cena, mas deixa um achocolatado que esteve escondido nos outros métodos, final doce e limpo. Ideal para torra clara com alta densidade. Moagem média-fina (~500 µm) garantiu clareza de respeito sem amargor perceptível."
     }
   ]
 }
