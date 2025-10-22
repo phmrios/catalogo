@@ -47,6 +47,17 @@
       "tempAgua": "93 °C",
       "melhorUso": "Método híbrido (imersão + percolação) que valoriza corpo e complexidade aromática.",
       "comentarios": "Aroma que começa achocolatado e evolui para floral e melado, acidez marcante e refinada, corpo forte e presente mesmo em diluição, doçura de mel persistente e retrogosto floral e frutado prolongado. Impressionante desempenho no Hario Switch."
+    },
+    {
+      "metodo": "V60",
+      "nota": null,
+      "moagem": 670,
+      "dose": 13.5,
+      "rendimento": 225,
+      "tempo": "2:45",
+      "tempAgua": 93,
+      "melhorUso": "Extração limpa e frutada; ideal para cafés de torra clara e origem única.",
+      "comentarios": "Bloom triplo com 3x o peso da dose até 30 segundos; segundo ataque até completar o ratio de 1:12; finalização com o restante da água até 225g aos 1:45; terminando extração aos 2:45. Extração equilibrada, acidez viva, doçura persistente (~15s de retrogosto)."
     }
   ]
 }
