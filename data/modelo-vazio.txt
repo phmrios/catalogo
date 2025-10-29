@@ -22,10 +22,10 @@
     {
       "metodo": "",
       "nota": null,
-      "moagem": null,
+      "moagem": null, \\ exata, não pode ser range
       "dose": null,
       "rendimento": null,
-      "tempo": null,
+      "tempo": null, \\ em segundos
       "tempAgua": null,
       "melhorUso": "",
       "comentarios": ""
