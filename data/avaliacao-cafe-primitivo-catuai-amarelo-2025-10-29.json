@@ -1,0 +1,45 @@
+{
+  "id": "7eed1f9821994495ad7343def9374ece",
+  "_ts": "2025-10-29T00:00:00Z",
+  "nome": "Primitivo Catuaí Amarelo",
+  "produtor": "Fazenda Joia Rara",
+  "origem": "Patrocínio, Minas Gerais, Brasil",
+  "variedade": "Catuaí Amarelo",
+  "processo": "Natural",
+  "dataBebido": "2025-10-29",
+  "dataTorra": "NDN",
+  "torrefador": "Primitivo Café",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média",
+  "defeitos": "NDN",
+  "perfil": "Clássico brasileiro, corpo cremoso, acidez baixa, notas doces de chocolate, caramelo e castanhas",
+  "impressoes": "Xícara doce e encorpada, final fraco mas persistente. Notas de especiarias, como pimenta (que é clara e evidente), e outros temperos inespecíficos. O processo natural trouxe densidade(metodo e barista dependente) e doçura pronunciadas, sem acidez agressiva (consegue até achar mas vc precisa querer e ser bom). Ideal para espresso, Aeropress e OXO.",
+  "tags": ["Cerrado Mineiro", "Catuaí Amarelo", "Torra Média", "Natural", "Chocolate", "Caramelo", "Castanhas", "Noz", "Pimenta"],
+  "avaliacoes": [
+    {
+      "metodo": "Aeropress (invertido)",
+      "nota": 8.7,
+      "moagem": "700–800 µm (médio-fino)",
+      "dose": "16 g café",
+      "rendimento": "240 g água",
+      "tempo": "2:00–2:15",
+      "tempAgua": "90–92 °C",
+      "melhorUso": "Xícara encorpada e doce, com final limpo e retrogosto de chocolate",
+      "comentarios": "Pressão controlada de 20–30 s. Doçura equilibrada; bypass de 10–20 g realça suavidade. Acidez leve e corpo aveludado."
+    },
+    {
+      "metodo": "OXO Rapid Brewer",
+      "nota": 8.5,
+      "moagem": "800–900 µm (médio)",
+      "dose": "16 g café",
+      "rendimento": "250 g água",
+      "tempo": "Automático (~5 min)",
+      "tempAgua": "92–96 °C (automático)",
+      "melhorUso": "Equilíbrio entre doçura e limpeza; ideal para quem busca perfil tradicional",
+      "comentarios": "Bloom automático eficiente. Xícara doce com corpo intenso"
+    }
+  ]
+}
