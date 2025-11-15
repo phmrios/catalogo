@@ -28,7 +28,7 @@
   "avaliacoes": [
     {
       "metodo": "Promessa",
-      "nota": 86,
+      "nota": null,
       "moagem": null,
       "dose": null,
       "rendimento": null,
@@ -39,7 +39,7 @@
     },
     {
       "metodo": "Hario Switch",
-      "nota": 88,
+      "nota": 4,
       "moagem": "25 clicks no Timemore ZP6",
       "dose": "13,5 g",
       "rendimento": "250 mL",
@@ -61,7 +61,7 @@
     },
     {
       "metodo": "AeroPress (invertido)",
-      "nota": 88,
+      "nota": 4,
       "moagem": 550,
       "dose": 13.5,
       "rendimento": 200,

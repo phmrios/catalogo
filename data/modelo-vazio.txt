@@ -21,7 +21,7 @@
   "avaliacoes": [
     {
       "metodo": "",
-      "nota": null,
+      "nota": null, \\ de 0 a 5 (nao pode numeros decimais)
       "moagem": null, \\ exata, não pode ser range
       "dose": null,
       "rendimento": null,

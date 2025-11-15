@@ -32,7 +32,7 @@
   "avaliacoes": [
     {
       "metodo": "OXO",
-      "nota": 4.2,
+      "nota": 2,
       "moagem": "Timemore C2 – 12 clicks (450 microns)",
       "dose": 18,
       "rendimento": 270,
@@ -43,7 +43,7 @@
     },
     {
       "metodo": "French Press",
-      "nota": 5.7,
+      "nota": 3,
       "moagem": "Timemore C2 – 21 clicks (800 microns)",
       "dose": 18,
       "rendimento": 270,
@@ -54,7 +54,7 @@
     },
     {
       "metodo": "Aeropress",
-      "nota": 4.14,
+      "nota": 2,
       "moagem": "Timemore C2",
       "dose": 17,
       "rendimento": 200,
@@ -65,7 +65,7 @@
     },
     {
       "metodo": "Aeropress – Álvaro Magri",
-      "nota": 6.5,
+      "nota": 3,
       "moagem": "Timemore C2",
       "dose": 17,
       "rendimento": 200,
@@ -76,7 +76,7 @@
     },
     {
       "metodo": "V60",
-      "nota": 8.1,
+      "nota": 4,
       "moagem": "1Zpresso ZP6 – click 28",
       "dose": 15,
       "rendimento": 225,
