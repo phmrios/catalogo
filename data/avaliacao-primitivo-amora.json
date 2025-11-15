@@ -1,0 +1,89 @@
+{
+  "id": "primitivo-amora-2025",
+  "_ts": "2025-11-10",
+  "nome": "Amora",
+  "produtor": "Fazenda Espigão",
+  "origem": "Pratinha MG, Brasil",
+  "variedade": "Arábica, lote especial 88 pontos",
+  "processo": "Fermentação controlada (provável fermentação aeróbica em tanque)",
+  "dataBebido": "2025-11-10",
+  "dataTorra": "informação não fornecida, mas aparenta torra recente",
+  "torrefador": "Primitivo",
+  "densidade": 0.69,
+  "tamanho": "16-18 screen estimado",
+  "umidade": 11.2,
+  "agtron": 72,
+  "torraNivel": "Média",
+  "defeitos": "Nenhum relevante. Café limpo, bem beneficiado. Entretanto, apresenta sensibilidade forte ao método e à uniformidade da moagem.",
+  "perfil": "Frutado e floral com acidez brilhante. Corpo de médio para suculento. Potencial aromático elevado, porém depende de moagem de alta precisão para evitar amargor e perda de definição. Ideal para métodos filtrados de alta claridade.",
+  "impressoes": "O Primitivo Amora é um café que expressa um perfil frutado intenso quando corretamente extraído. Em moedores de baixa uniformidade como o Timemore C2, tende a exibir citricidade agressiva, amargor precoce e queda aromática. Isso sugere alta sensibilidade à distribuição de partículas. Com um moedor como o ZP6, no entanto, o café se transforma completamente: notas límpidas de morango, cereja, amora e até kiwi emergem com grande precisão. A fermentação confere caráter 'vinhoso' leve, sem defeito, e a torra média preserva acidez e estrutura sem exagerar no dulçor caramelizado. É um café que recompensa extrações delicadas, fluxo estável e moagem fina bem calibrada. Brilha de forma extraordinária no V60, sendo uma das xícaras mais claras e definidas já obtidas dentro desse perfil fermentado.",
+  "tags": [
+    "frutado",
+    "fermentado",
+    "frutas-vermelhas",
+    "especial",
+    "primitivo",
+    "amora",
+    "vinhoso",
+    "aromático",
+    "acidez-brilhante",
+    "clareza-sensorial"
+  ],
+  "avaliacoes": [
+    {
+      "metodo": "OXO",
+      "nota": 4.2,
+      "moagem": "Timemore C2 – 12 clicks (450 microns)",
+      "dose": 18,
+      "rendimento": 270,
+      "tempo": 210,
+      "tempAgua": 94,
+      "melhorUso": "Quando se deseja acidez alta e corpo moderado, mas não recomendado para revelar nuances.",
+      "comentarios": "Aromas só perceptíveis antes da moagem. Na xícara, amargor precoce e finalização inexistente. Corpo interessante, mas desequilíbrio evidente. A falta de uniformidade do C2 prejudicou completamente a proposta do café."
+    },
+    {
+      "metodo": "French Press",
+      "nota": 5.7,
+      "moagem": "Timemore C2 – 21 clicks (800 microns)",
+      "dose": 18,
+      "rendimento": 270,
+      "tempo": 240,
+      "tempAgua": 93,
+      "melhorUso": "Método de imersão longa, mas não adequado para cafés fermentados com acidez alta.",
+      "comentarios": "Notas de amora, limão, morango e cereja presentes no aroma, porém o amargor tomou a frente no sabor. Textura limpa, mas pouco doce. Acidez muito alta e finalização com tabaco. Método exacerbou as arestas do café."
+    },
+    {
+      "metodo": "Aeropress",
+      "nota": 4.14,
+      "moagem": "Timemore C2",
+      "dose": 17,
+      "rendimento": 200,
+      "tempo": 150,
+      "tempAgua": 93,
+      "melhorUso": "Quando se busca corpo alto e redução do odor cítrico.",
+      "comentarios": "Surpreendente no corpo. Citricidade dominante, pouca profundidade aromática e equilíbrio quase inexistente. Melhor resultado até então entre os métodos com C2, mas muito abaixo do potencial real."
+    },
+    {
+      "metodo": "Aeropress – Álvaro Magri",
+      "nota": 6.5,
+      "moagem": "Timemore C2",
+      "dose": 17,
+      "rendimento": 200,
+      "tempo": 120,
+      "tempAgua": 92,
+      "melhorUso": "Para quem gosta de perfil tabaco, corpo intenso e acidez brilhante.",
+      "comentarios": "Aroma de tabaco surpreendentemente limpo. Corpo sólido e denso. Amargor controlado e acidez equilibrada. Mesmo assim, ainda limitado pelo moedor, que não conseguiu liberar a camada frutada mais delicada."
+    },
+    {
+      "metodo": "V60",
+      "nota": 8.1,
+      "moagem": "1Zpresso ZP6 – click 28",
+      "dose": 15,
+      "rendimento": 225,
+      "tempo": 150,
+      "tempAgua": 92,
+      "melhorUso": "Método recomendado. Melhor extração do café.",
+      "comentarios": "Extraiu com clareza absoluta todas as nuances. Frutas vermelhas definidas, zero amargor, textura delicada com corpo suficiente para manter estrutura. Finalização longa com frutas maduras e leve kiwi. Drip Assist garantiu fluxo contínuo e padronizado, expondo o potencial total do café."
+    }
+  ]
+}
