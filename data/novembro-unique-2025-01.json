@@ -1,0 +1,47 @@
+{
+  "id": "novembro-unique-2025-01",
+  "_ts": 1764900000,
+  "nome": "Café Novembro UNIQUE",
+  "produtor": "Danielle Fonseca e José Wagner Ribeiro Junqueira",
+  "origem": "Fazendas Comtu e Três Barras, Santana da Vargem e Carmo de Minas, MG",
+  "variedade": "Catuai Vermelho e Catuai Amarelo",
+  "processo": "Natural Fermentado + Natural",
+  "dataBebido": "24/11/2025 a 04/12/2025",
+  "dataTorra": "",
+  "torrefador": "",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média",
+  "defeitos": "",
+  "perfil": "Chocolate ao leite, cereja em calda, trufa de morango, caramelo; acidez cítrica, corpo cremoso, retrogosto doce e prolongado.",
+  "impressoes": "Café muito doce, acidez cítrica leve, corpo aveludado e retrogosto doce prolongado. Em geral, percebi bastante potencial. Mesmo com poucos testes devido à viagem, mostrou boa complexidade. Um amigo conseguiu extrair um perfil lembrando PEQUI, o que não sei explicar.",
+  "tags": [
+  "café especial",
+  "natural fermentado",
+  "natural",
+  "Catuai Vermelho",
+  "Catuai Amarelo",
+  "Minas Gerais",
+  "Santana da Vargem",
+  "Carmo de Minas",
+  "torra média",
+  "notas doces",
+  "frutas vermelhas",
+  "caramelo",
+  "chocolate ao leite"],
+  "avaliacoes": [
+    {
+      "metodo": "Melita",
+      "nota": null,
+      "moagem": null,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 277,
+      "tempAgua": 100,
+      "melhorUso": "",
+      "comentarios": "Moagem 18 no Timemore C2. Aroma: frutas vermelhas. Sabor: citricidade leve com chocolate, lembrando chocolate amargo com calda de morango. Acidez suave, corpo presente, equilíbrio perfeito. Doçura aproximada 9/10. Finalização sublime. Aromas adicionais: floral frutado."
+    }
+  ]
+}
