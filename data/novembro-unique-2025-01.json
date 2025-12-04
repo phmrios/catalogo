@@ -34,10 +34,10 @@
   "avaliacoes": [
     {
       "metodo": "Melita",
-      "nota": null,
-      "moagem": null,
-      "dose": null,
-      "rendimento": null,
+      "nota": 4,
+      "moagem": 650,
+      "dose": 16,
+      "rendimento": 300,
       "tempo": 277,
       "tempAgua": 100,
       "melhorUso": "",
