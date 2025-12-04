@@ -175,102 +175,143 @@ function cardHTML(c) {
     .join(" ");
   const blocoLivre =
     c.perfil || c.impressoes
-      ? `<div class="note"><strong>Notas:</strong> ${esc([c.perfil, c.impressoes].filter(Boolean).join(" | "))}</div>`
+      ? `<div class="note"><strong>Notas:</strong> ${esc(
+          [c.perfil, c.impressoes].filter(Boolean).join(" | "),
+        )}</div>`
       : "";
 
-  return `
-    <article class="card">
-      <h3>${esc(c.nome || `(${c.__error ? "Arquivo inválido" : "Sem nome"})`)}</h3>
-      <div class="meta">${meta}</div>
-      <div>
-        <span class="stars" aria-label="Nota média ${notaAvg} de 5">${stars(notaAvg)}</span>
-        ${c.dataTorra ? `• torra ${fmtData(c.dataTorra)}` : ""}
-      </div>
-      ${tags ? `<div class="meta">${tags}</div>` : ""}
-      ${blocoLivre}
+  // Se o manifesto carregou certinho, cada café tem __href com o nome do JSON
+  const href =
+    c.__href && !c.__error
+      ? `post.html?cafe=${encodeURIComponent(c.__href)}`
+      : "";
 
-      <details class="details-block">
-        <summary class="btn-ghost" aria-label="Ver detalhes de ${esc(c.nome || "café")}">Ver detalhes</summary>
+  const titulo = c.nome || `(${c.__error ? "Arquivo inválido" : "Sem nome"})`;
 
-        ${
-          c.__error
-            ? `<div class="box-claro" style="border-color:#7a2e2e;background:#fff2f2;color:#351616;">
-            <strong>Erro ao carregar <code>${esc(c.__href || "")}</code>:</strong> ${esc(c.__error)}
-          </div>`
-            : ""
-        }
-
-        ${
-          Array.isArray(c.__warnings) && c.__warnings.length
-            ? `
-          <div class="box-claro">
-            <strong>Avisos de validação:</strong>
-            <ul style="margin:.4rem 0 0 .9rem;">
-              ${c.__warnings.map((w) => `<li>${esc(w)}</li>`).join("")}
-            </ul>
-          </div>`
-            : ""
-        }
-
-        <div class="detail-grid">
-          ${dlRow("Arquivo", c.__href)}
-          ${dlRow("ID", c.id)}
-          ${dlRow("Timestamp (_ts)", c._ts)}
-          ${dlRow("Nome", c.nome)}
-          ${dlRow("Produtor", c.produtor)}
-          ${dlRow("Origem", c.origem)}
-          ${dlRow("Variedade", c.variedade)}
-          ${dlRow("Processo", c.processo)}
-          ${dlRow("Data de quando foi degustado", c.dataBebido ? fmtData(c.dataBebido) : "")}
-          ${dlRow("Data de torra", c.dataTorra ? fmtData(c.dataTorra) : "")}
-          ${dlRow("Torrefador", c.torrefador)}
-          ${dlRow("Densidade (g/L)", c.densidade)}
-          ${dlRow("Tamanho (μm)", c.tamanho)}
-          ${dlRow("Umidade (%)", c.umidade)}
-          ${dlRow("Agtron", c.agtron)}
-          ${dlRow("Torra (nível)", c.torraNivel)}
-          ${dlRow("Defeitos", c.defeitos)}
-          ${dlRow("Perfil sensorial", c.perfil)}
-          ${dlRow("Impressões", c.impressoes)}
+  // Caso não haja href (stub de erro), o card continua sendo só um card sem link
+  if (!href) {
+    return `
+      <article class="card">
+        <h3>${esc(titulo)}</h3>
+        <div class="meta">${meta}</div>
+        <div>
+          <span class="stars" aria-label="Nota média ${notaAvg} de 5">${stars(notaAvg)}</span>
+          ${c.dataTorra ? `• torra ${fmtData(c.dataTorra)}` : ""}
         </div>
+        ${tags ? `<div class="meta">${tags}</div>` : ""}
+        ${blocoLivre}
+        ${renderDetails(c, avals)}
+      </article>
+    `;
+  }
 
-        ${renderAvaliacoesTable(avals)}
-      </details>
-    </article>
+  // Versão com link para o post
+  return `
+    <a class="card-link" href="${href}" aria-label="Abrir post sobre ${esc(
+      titulo,
+    )}">
+      <article class="card card--link">
+        <h3>${esc(titulo)}</h3>
+        <div class="meta">${meta}</div>
+        <div>
+          <span class="stars" aria-label="Nota média ${notaAvg} de 5">${stars(notaAvg)}</span>
+          ${c.dataTorra ? `• torra ${fmtData(c.dataTorra)}` : ""}
+        </div>
+        ${tags ? `<div class="meta">${tags}</div>` : ""}
+        ${blocoLivre}
+        <p class="card-link-cta">
+          <span>Ver post deste café</span>
+        </p>
+        ${renderDetails(c, avals)}
+      </article>
+    </a>
   `;
 }
 
-/* Helpers de UI */
-function badge(title, value) {
-  return `<span class="badge" title="${esc(title)}">${esc(value)}</span>`;
-}
-function dlRow(label, value) {
-  if (value === null || value === undefined || value === "") return "";
-  return `
-    <div class="dl-row">
-      <div class="dl-term">${esc(label)}</div>
-      <div class="dl-def">${esc(String(value))}</div>
+function renderDetails(c, avals) {
+  const avisoErro = c.__error
+    ? `<div class="box-claro" style="border-color:#7a2e2e;background:#fff2f2;color:#351616;">
+        <strong>Erro ao carregar <code>${esc(c.__href || "")}</code>:</strong> ${esc(c.__error)}
+      </div>`
+    : "";
+
+  const avisosValidacao =
+    Array.isArray(c.__warnings) && c.__warnings.length
+      ? `
+        <div class="box-claro">
+          <strong>Avisos de validação:</strong>
+          <ul style="margin:.4rem 0 0 .9rem;">
+            ${c.__warnings.map((w) => `<li>${esc(w)}</li>`).join("")}
+          </ul>
+        </div>`
+      : "";
+
+  const detalhesCafe = `
+    <div class="detail-grid">
+      ${dlRow("Arquivo", c.__href)}
+      ${dlRow("ID", c.id)}
+      ${dlRow("Timestamp (_ts)", c._ts)}
+      ${dlRow("Nome", c.nome)}
+      ${dlRow("Produtor", c.produtor)}
+      ${dlRow("Origem", c.origem)}
+      ${dlRow("Variedade", c.variedade)}
+      ${dlRow("Processo", c.processo)}
+      ${dlRow(
+        "Data de quando foi degustado",
+        c.dataBebido ? fmtData(c.dataBebido) : "",
+      )}
+      ${dlRow("Data de torra", c.dataTorra ? fmtData(c.dataTorra) : "")}
+      ${dlRow("Torrefador", c.torrefador)}
+      ${dlRow("Densidade (g/L)", c.densidade)}
+      ${dlRow("Tamanho (μm)", c.tamanho)}
+      ${dlRow("Umidade (%)", c.umidade)}
+      ${dlRow("Agtron", c.agtron)}
+      ${dlRow("Torra (nível)", c.torraNivel)}
+      ${dlRow("Defeitos", c.defeitos)}
+      ${dlRow("Perfil sensorial", c.perfil)}
+      ${dlRow("Impressões", c.impressoes)}
     </div>
   `;
+
+  const avalsRows =
+    Array.isArray(avals) && avals.length ? renderAvaliacoesTable(avals) : "";
+
+  return `
+    <details class="details-block">
+      <summary class="btn-ghost" aria-label="Ver detalhes de ${esc(
+        c.nome || "café",
+      )}">Ver detalhes</summary>
+
+      ${avisoErro}
+      ${avisosValidacao}
+      ${detalhesCafe}
+      ${avalsRows}
+    </details>
+  `;
 }
+
 function renderAvaliacoesTable(avals) {
   if (!Array.isArray(avals) || avals.length === 0) return "";
   const rows = avals
     .map(
       (m, i) => `
-    <tr>
-      <th scope="row">${i + 1}</th>
-      <td>${esc(m?.metodo ?? "")}</td>
-      <td><span class="stars" aria-label="Nota ${m?.nota ?? 0} de 5">${stars(m?.nota ?? 0)}</span></td>
-      <td>${safe(m?.moagem)}</td>
-      <td>${safe(m?.dose)}</td>
-      <td>${safe(m?.rendimento)}</td>
-      <td>${safe(m?.tempo)}</td>
-      <td>${safe(m?.tempAgua)}</td>
-      <td>${esc(m?.melhorUso ?? "")}</td>
-      <td>${esc(m?.comentarios ?? "")}</td>
-    </tr>
-  `,
+        <tr>
+          <th scope="row">${i + 1}</th>
+          <td>${esc(m?.metodo ?? "")}</td>
+          <td>
+            <span class="stars" aria-label="Nota ${
+              m?.nota ?? 0
+            } de 5">${stars(m?.nota ?? 0)}</span>
+          </td>
+          <td>${safe(m?.moagem)}</td>
+          <td>${safe(m?.dose)}</td>
+          <td>${safe(m?.rendimento)}</td>
+          <td>${safe(m?.tempo)}</td>
+          <td>${safe(m?.tempAgua)}</td>
+          <td>${esc(m?.melhorUso ?? "")}</td>
+          <td>${esc(m?.comentarios ?? "")}</td>
+        </tr>
+      `,
     )
     .join("");
 
@@ -294,6 +335,20 @@ function renderAvaliacoesTable(avals) {
         </thead>
         <tbody>${rows}</tbody>
       </table>
+    </div>
+  `;
+}
+
+/* Helpers de UI */
+function badge(title, value) {
+  return `<span class="badge" title="${esc(title)}">${esc(value)}</span>`;
+}
+function dlRow(label, value) {
+  if (value === null || value === undefined || value === "") return "";
+  return `
+    <div class="dl-row">
+      <div class="dl-term">${esc(label)}</div>
+      <div class="dl-def">${esc(String(value))}</div>
     </div>
   `;
 }

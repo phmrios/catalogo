@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Café Catálogo - Post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <h1>Café Catálogo</h1>
+          <small>Post do café</small>
+        </div>
+
+        <div class="header-actions" role="group" aria-label="Ações">
+          <a href="index.html" class="btn">Voltar para a vitrine</a>
+        </div>
+      </header>
+
+      <div id="status" class="box-claro" style="display: none"></div>
+
+      <main id="postRoot" aria-live="polite" aria-busy="true"></main>
+
+      <footer class="footnote">Pedro Rios, 2025.</footer>
+    </div>
+
+    <script type="module" src="./assets/post.js"></script>
+  </body>
+</html>
