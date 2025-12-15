@@ -1,11 +1,11 @@
 {
-  "id": "",
+  "id": "novembro-02-unique",
   "_ts": null,
-  "nome": "",
-  "produtor": "",
-  "origem": "",
-  "variedade": "",
-  "processo": "",
+  "nome": "Novembro 02 UNIQUE",
+  "produtor": "José Wagner Ribeiro Junqueira",
+  "origem": "Fazenda Três Barras, Carmo de Minas, Mantiqueira de Minas, MG",
+  "variedade": "Catuaí Amarelo",
+  "processo": "Natural",
   "dataBebido": "",
   "dataTorra": "",
   "torrefador": "",
@@ -13,22 +13,62 @@
   "tamanho": null,
   "umidade": null,
   "agtron": null,
-  "torraNivel": "",
+  "torraNivel": "Média",
   "defeitos": "",
-  "perfil": "",
-  "impressoes": "",
-  "tags": [],
+  "perfil": "Chocolate, avelã, caramelo tostado, baunilha e frutas amarelas. Acidez cítrica, corpo cremoso e finalização persistente de chocolate meio amargo.",
+  "impressoes": "Café consistente, entrega exatamente o perfil sensorial prometido, com destaque para chocolate e corpo elevado.",
+  "tags": [
+    "chocolate",
+    "avelã",
+    "caramelo",
+    "baunilha",
+    "frutas amarelas",
+    "corpo cremoso"
+  ],
   "avaliacoes": [
     {
-      "metodo": "",
-      "nota": null, \\ de 0 a 5 (nao pode numeros decimais)
-      "moagem": null, \\ exata, não pode ser range
-      "dose": null, \\ gramas usado no preparo
-      "rendimento": null, \\ em ml
-      "tempo": null, \\ em segundos
+      "metodo": "Melita",
+      "nota": 4,
+      "moagem": 18,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 420,
+      "tempAgua": 100,
+      "melhorUso": "Filtro",
+      "comentarios": "Extração lenta. Amargor achocolatado imponente, corpo extremamente forte, doçura intensa lembrando chocolate puro e finalização persistente de chocolate meio amargo."
+    },
+    {
+      "metodo": "Melita",
+      "nota": 4,
+      "moagem": 15,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 240,
+      "tempAgua": 100,
+      "melhorUso": "Filtro",
+      "comentarios": "Aroma de banana extremamente presente, sabor de chocolate, acidez leve, corpo forte, equilíbrio perfeito e finalização cítrica lembrando limão."
+    },
+    {
+      "metodo": "Melita",
+      "nota": 5,
+      "moagem": 20,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 266,
+      "tempAgua": 100,
+      "melhorUso": "Filtro",
+      "comentarios": "Chocolate intenso com leve banana no aroma. Início adocicado, retrogosto amargo, corpo forte, acidez ausente e finalização de chocolate meio amargo. Café cumpre exatamente o que promete."
+    },
+    {
+      "metodo": "Espresso",
+      "nota": 4,
+      "moagem": 16,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 30,
       "tempAgua": null,
-      "melhorUso": "",
-      "comentarios": ""
+      "melhorUso": "Espresso",
+      "comentarios": "Extração rápida com corpo elevado e textura oleosa. Acidez pronunciada, doçura moderada e finalização persistente de chocolate meio amargo. Leve sensação salina sugerindo proximidade de subextração."
     }
   ]
 }
