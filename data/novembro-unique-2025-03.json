@@ -1,0 +1,67 @@
+{
+  "id": "unique-novembro-3-comtu",
+  "_ts": null,
+  "nome": "UNIQUE NOVEMBRO 3",
+  "produtor": "Danielle Fonseca",
+  "origem": "Fazenda Comtu, Santana da Vargem, Sul de Minas MG",
+  "variedade": "Catuaí Vermelho",
+  "processo": "Natural Fermentado",
+  "dataBebido": "2025-12-01",
+  "dataTorra": "",
+  "torrefador": "Unique Cafés",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média Clara",
+  "defeitos": "",
+  "perfil": "Notas de framboesa, cereja, iogurte de frutas vermelhas e hibisco. Corpo aveludado.",
+  "impressoes": "Café versátil e sensível. A nota de iogurte é predominante na imersão, mas o café pode ficar agressivo/amargo na percolação ou espresso.",
+  "tags": ["Sul de Minas", "Natural Fermentado", "Iogurte"],
+  "avaliacoes": [
+    {
+      "metodo": "Aeropress",
+      "nota": 5,
+      "moagem": "55 (DF54)",
+      "dose": 18,
+      "rendimento": 230,
+      "tempo": 150,
+      "tempAgua": 100,
+      "melhorUso": "Imersão (Destaque)",
+      "comentarios": "Receita campeã. Aroma lácteo de iogurte adoçado e cereja. Sabor delicioso e corpo forte. Acidez incomoda levemente ao esfriar."
+    },
+    {
+      "metodo": "Espresso",
+      "nota": 1,
+      "moagem": "14 (DF54)",
+      "dose": 18,
+      "rendimento": 48,
+      "tempo": 20,
+      "tempAgua": 100,
+      "melhorUso": "Não recomendado",
+      "comentarios": "Detestado. Corpo excessivo ('porrada'), desequilibrado, sem doçura. A torra/processo não favoreceu este método."
+    },
+    {
+      "metodo": "Hoop",
+      "nota": 3,
+      "moagem": "45 (Timemore C2)",
+      "dose": 18,
+      "rendimento": 228,
+      "tempo": null,
+      "tempAgua": 100,
+      "melhorUso": "Coados",
+      "comentarios": "Sabor lático, corpo forte e amargo. Doçura presente (chocolate), mas finalização metálica."
+    },
+    {
+      "metodo": "V60",
+      "nota": 2,
+      "moagem": "3.7 (ZP6)",
+      "dose": 15,
+      "rendimento": 250,
+      "tempo": 165,
+      "tempAgua": 93,
+      "melhorUso": "Coados",
+      "comentarios": "Ficou cítrico amargo, com acidez forte e sem doçura. Finalização marcante, e achocolatada."
+    }
+  ]
+}
