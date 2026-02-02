@@ -1,0 +1,118 @@
+{
+  "id": "bourbon_mantiqueira_experimento_sensorial",
+  "_ts": 1767139200000,
+  "nome": "Bourbon da Mantiqueira",
+  "produtor": "Helcio Carneiro",
+  "origem": "Brasil / Carmo de Minas / Mantiqueira de Minas - MG / 1.250 m",
+  "variedade": "Bourbon Amarelo",
+  "processo": "Natural",
+  "dataTorra": null,
+  "torrefador": null,
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Clara",
+  "defeitos": "NDN",
+  "perfil": "Chocolate dominante; frutas vermelhas sutis (morango, amora); acidez baixa; corpo aveludado e denso; finalização adocicada com chocolate meio amargo.",
+  "impressoes": "Café extremamente estruturado, com baixa acidez e alta resposta a ajustes de moagem, água e moedor. Beneficia-se de moedores mais uniformes e menor mineralização.",
+  "tags": [
+    "Brasil",
+    "Mantiqueira de Minas",
+    "Bourbon Amarelo",
+    "Natural",
+    "Chocolate",
+    "V60",
+    "Competição"
+  ],
+  "avaliacoes": [
+    {
+      "metodo": "V60 Kasuya 4:6",
+      "nota": 3,
+      "moagem": 680,
+      "dose": 13.5,
+      "rendimento": 225,
+      "tempo": 250,
+      "tempAgua": 93,
+      "melhorUso": "Exploração sensorial",
+      "comentarios": "Chocolate presente, corpo alto, acidez ausente e retrogosto de milho/fubá. Extração longa e fora do perfil esperado, mas interessante."
+    },
+    {
+      "metodo": "V60 SCA",
+      "nota": 4,
+      "moagem": 650,
+      "dose": 13.5,
+      "rendimento": 216,
+      "tempo": 150,
+      "tempAgua": 93,
+      "melhorUso": "Filtro",
+      "comentarios": "Chocolate ao leite, doçura forte, zero amargor. Bebida equilibrada e limpa, apesar da acidez baixa."
+    },
+    {
+      "metodo": "Hario Switch",
+      "nota": 2,
+      "moagem": 720,
+      "dose": 15,
+      "rendimento": 225,
+      "tempo": 180,
+      "tempAgua": 93,
+      "melhorUso": "Consumo cotidiano",
+      "comentarios": "Perfil simples, herbal persistente, pouco complexo. Amargor cresce ao esfriar."
+    },
+    {
+      "metodo": "V60 Estilo Competição",
+      "nota": 5,
+      "moagem": 420,
+      "dose": 15,
+      "rendimento": 230,
+      "tempo": 180,
+      "tempAgua": 93,
+      "melhorUso": "Apresentação / Competição",
+      "comentarios": "Aroma extremamente adocicado e melado, chocolate intenso, equilíbrio exemplar. Melhor receita testada."
+    },
+    {
+      "metodo": "V60 Clareza Máxima v2",
+      "nota": 4,
+      "moagem": 350,
+      "dose": 13.5,
+      "rendimento": 225,
+      "tempo": 180,
+      "tempAgua": 95,
+      "melhorUso": "Intensidade",
+      "comentarios": "Chocolate amargo profundo, corpo denso e finalização longa. Clareza sacrificada em favor de potência."
+    },
+    {
+      "metodo": "Melitta",
+      "nota": 4,
+      "moagem": 700,
+      "dose": 15,
+      "rendimento": 225,
+      "tempo": 270,
+      "tempAgua": 93,
+      "melhorUso": "Tradicional",
+      "comentarios": "Cremoso, adocicado como chocolate belga, clássico e confortável. Poderia usar moagem ainda mais grossa."
+    },
+    {
+      "metodo": "Hario Mugen",
+      "nota": 5,
+      "moagem": 400,
+      "dose": 15,
+      "rendimento": 225,
+      "tempo": 180,
+      "tempAgua": 93,
+      "melhorUso": "Filtro",
+      "comentarios": "Doçura frutada, equilíbrio total e extração extremamente estável. Uma das melhores expressões do café."
+    },
+    {
+      "metodo": "B75",
+      "nota": 4,
+      "moagem": 900,
+      "dose": 13.5,
+      "rendimento": 225,
+      "tempo": 183,
+      "tempAgua": 92,
+      "melhorUso": "Finalização",
+      "comentarios": "Chocolate bem destacado, finalização longa e limpa. Receita guiada por observação visual da cama."
+    }
+  ]
+}
