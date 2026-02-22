@@ -1,0 +1,53 @@
+{
+  "id": "",
+  "_ts": null,
+  "nome": "Primitivo Geisha",
+  "produtor": "Inácio Urban",
+  "origem": "Coromandel (Fazenda Rio Brilhante), Brasil",
+  "variedade": "Geisha (Coffea arabica)",
+  "processo": "Fermentado (fermentação)",
+  "dataBebido": "",
+  "dataTorra": "",
+  "torrefador": "",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média",
+  "defeitos": "",
+  "perfil": "Notas declaradas: maçã verde, graviola e jasmim. Corpo licoroso.",
+  "impressoes": "O experimento contrasta extração orientada ao corpo (Hario Switch) versus clareza (Melitta). No Switch houve chocolate no aroma, amargor, baixa percepção de acidez e doçura, corpo descrito como licor diluído e finalização herbal (caráter pré-torra), sugerindo superextração localizada e mascaramento de florais e frutados. No Melitta, houve alta performance sensorial com doçura, acidez e finalização prolongada, alinhada ao perfil clássico do Geisha. Síntese: a cultivar privilegia clareza sobre densidade, e processos fermentados pedem maior controle de extração.",
+  "tags": [
+    "geisha",
+    "cafe-especial",
+    "fermentado",
+    "floral",
+    "frutado",
+    "coromandel",
+    "brasil"
+  ],
+  "avaliacoes": [
+    {
+      "metodo": "Hario Switch",
+      "nota": null,
+      "moagem": 120,
+      "dose": null,
+      "rendimento": null,
+      "tempo": null,
+      "tempAgua": null,
+      "melhorUso": "Teste de limite de extração (corpo e extração intensa)",
+      "comentarios": "Proporção 1:13. Moagem fina (120). Resultado: aroma de chocolate, sabor amargo, pouca ou nenhuma acidez e doçura percebidas, equilíbrio ausente, corpo como licor diluído, finalização herbal associada a caráter pré-torra. Interpretação no ensaio: possível superextração localizada, supressão da acidez típica e mascaramento de florais e frutados por saturação de sólidos dissolvidos."
+    },
+    {
+      "metodo": "Melitta",
+      "nota": 4,
+      "moagem": 680,
+      "dose": null,
+      "rendimento": null,
+      "tempo": null,
+      "tempAgua": null,
+      "melhorUso": "Clareza e expressão aromática (equilíbrio e finalização longa)",
+      "comentarios": "Moagem média grossa (680 µm). Proporção 1:16,6. Extração mais equilibrada visando clareza. Resultado: desempenho sensorial elevado, com destaque para aroma e finalização (10), doçura (9,75) e acidez (9,25). Explicações no ensaio: moagem mais grossa reduz amargor, proporção mais diluída favorece clareza e percepção aromática, e o fluxo contínuo contribui para extração homogênea."
+    }
+  ]
+}
