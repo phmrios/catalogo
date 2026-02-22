@@ -1,0 +1,44 @@
+{
+  "id": "lote-2369",
+  "nome": "Dengo Café torrado em grãos",
+  "produtor": "Unique Cafés Especiais S.A.",
+  "origem": "Brasil",
+  "variedade": "",
+  "processo": "",
+  "dataBebido": "",
+  "dataTorra": "",
+  "torrefador": "Unique Cafés Especiais S.A.",
+  "densidade": null,
+  "tamanho": null,
+  "umidade": null,
+  "agtron": null,
+  "torraNivel": "Média",
+  "defeitos": "",
+  "perfil": "",
+  "impressoes": "Café bom para o dia a dia; possivelmente abaixo de 80 pontos, porém agradável.",
+  "tags": ["arabica", "graos", "torra-media", "dengo"],
+  "avaliacoes": [
+    {
+      "metodo": "V60",
+      "nota": 4,
+      "moagem": 55,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 220,
+      "tempAgua": 93,
+      "melhorUso": "Coado",
+      "comentarios": "Corpo alto e finalização marcante; doçura baixa e equilíbrio mediano."
+    },
+    {
+      "metodo": "Melitta",
+      "nota": 4,
+      "moagem": 70,
+      "dose": null,
+      "rendimento": null,
+      "tempo": 220,
+      "tempAgua": 93,
+      "melhorUso": "Coado",
+      "comentarios": "Perfil equilibrado, corpo elevado; experiência geral boa porém sem destaque."
+    }
+  ]
+}
